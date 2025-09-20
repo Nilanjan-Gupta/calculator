@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+body{
+    min-height: 100vh;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+}
+.Calculator {
+    width: 350px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: #222;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.display {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.display input {
+    width: 100%;
+    font-size: 2rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #333;
+    color: #fff;
+    text-align: right;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    flex: 1 1 0;
+    padding: 15px 0;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    background: #444;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.18);
+}
+
+button:hover {
+    background: #666;
+    color: #ffd700;
+    transform: scale(1.05);
+}
+
+button.equal {
+    background: #f39c12;
+    color: #fff;
+}
+
+button.equal:hover {
+    background: #e67e22;
+}
+
+/* Responsive styles */
+@media (max-width: 500px) {
+    .Calculator {
+        width: 95vw;
+        padding: 10px;
+        margin: 20px auto;
+    }
+    .display input {
+        font-size: 1.3rem;
+        padding: 8px;
+    }
+    button {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+    .row {
+        gap: 6px;
+    }
+}
